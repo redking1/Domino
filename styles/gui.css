@@ -1,0 +1,49 @@
+
+#html {
+ height: 150%;
+}
+body {
+ height: 100%;
+ margin: 0;
+ padding: 0;
+ text-align: center;
+ font: 400 0.8em verdana, arial, sans-serif;
+ font-size: large;
+ line-height: 100%;
+ background-color:#666;
+ list-style: none;
+ background-image: url(../images/line.jpeg);
+ background-repeat: no-repeat;
+ background-size: cover;                      /* <------ */
+
+
+ color: yellowgreen;
+}
+#content {
+    height: 100%;
+ min-height: 100%;
+ text-align: left;
+ max-width: 975px;
+ margin: 0 auto;
+
+}
+
+#mainMenu li {
+ display: inline;
+ list-style: none;
+}
+
+
+#mainMenu ul {
+ margin: 0;
+ padding: 0;
+ float: right;
+}
+#mainMenu li a {
+ margin: 0px 2px 0px 2px;
+ padding: 5px 0.5em 5px 0.5em;
+ font: 400 1.6em "trebuchet ms", serif;
+ text-decoration: none;
+ text-transform: lowercase;
+ color: red;
+}

@@ -1,0 +1,43 @@
+
+ <div>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+         </div>    
+
+
+
+  <?php
+			
+		if (mysqli_num_rows($display) > 0) {
+            while ($row = mysqli_fetch_assoc($display)) {
+				
+				$recipe=$row[""];
+				$rowid=$row[""];						
+		    	
+		    	echo "<li class='list'>$recipe ";
+		    	
+		    	echo "<div class='listright'><a href='dailyedit.php?sendid=$rowid'>edit</a> <a href='dailydelete.php?deleteid=$rowid'>delete</a></div></li>";
+
+				}
+		}
+
+		?>
+
+
+<?php
+
+    session_start();
+    include("../connections/conn.php");
+    
+    $email = $_SESSION['7062vle_email'];
+    $role = $_SESSION['7062vle_role'];
+    $id = $_SESSION['7062vle_id'];
+    
+    if (!isset($email)) {
+        header('Location:logout.php');
+    }
+    
+            
+$query1 = "SELECT VLE_cat.*, VLE_post.* FROM VLE_cat INNER JOIN VLE_post ON VLE_cat.cat_id WHERE VLE_post.cat_id = 1";
+         $result = mysqli_query($conn, $query1) or die(mysqli_error($conn));
